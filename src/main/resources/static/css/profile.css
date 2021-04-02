@@ -5,12 +5,13 @@ body {
 #profile a.nav-link {
     text-transform: uppercase;
 }
+
 #profile a.nav-link.active {
     border-bottom: 1px solid blue;
 }
 
 #profile > .row:first-child {
-    margin-bottom:20px;
+    margin-bottom: 20px;
 }
 
 .card {
@@ -18,9 +19,10 @@ body {
 }
 
 .card-img-top {
-    padding-top:10px;
+    padding-top: 10px;
 }
 
 .recentLinks {
-    padding-top:10px;
+    padding-top: 10px;
 }
+
