@@ -1,21 +1,31 @@
 package com.ayvar.springit.domain;
 
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import com.ayvar.springit.domain.Auditable;
+import com.ayvar.springit.domain.Link;
+import lombok.*;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import java.util.Objects;
+import javax.persistence.ManyToOne;
 
 @Entity
-@Data
 @NoArgsConstructor
-public class Vote {
+@RequiredArgsConstructor
+@Getter
+@Setter
+public class Vote extends Auditable {
 
     @Id
     @GeneratedValue
     private Long id;
-    private int vote;
+
+    @NonNull
+    private short direction;
+
+    @NonNull
+    @ManyToOne
+    private Link link;
+
 
 }
