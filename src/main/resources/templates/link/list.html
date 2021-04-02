@@ -28,10 +28,10 @@
                       th:text="${link.getPrettyTime()}" th:title="${link.getCreationDate()}">1 hour(s)
                 </time>
                 by
-                <a class="author" href="/">therealdanvega</a>
+                <a class="author" comments href="/" th:text="${link.getCreatedBy()}">therealdanvega</a>
             </p>
             <p>
-                <a class="comments" th:href="@{'/link/' + ${link.id} + '#comments'}"
+                <a class="" th:href="@{'/link/' + ${link.id} + '#comments'}"
                    th:text="|${link.getComments().size()} comments|"><i class="fas fa-comments"></i> 0 comments</a>
                 <a class="share" href="/"><i class="fas fa-share-square"></i> share</a>
             </p>
