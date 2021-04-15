@@ -82,7 +82,7 @@
     </div>
 
 </div>
-<script sec:authorize="isFullyAuthenticated()">
+<script>
     const allvotes = document.querySelectorAll(".upvote, .downvote");
     for (let i = 0; i < allvotes.length; i++) {
         let className = allvotes[i].className;
